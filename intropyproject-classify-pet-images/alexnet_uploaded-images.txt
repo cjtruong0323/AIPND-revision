@@ -69,7 +69,7 @@ N Not-Dog Images    :   2
 % Correct Breed     : 50.0
 % Correct Not-Dogs  : 100.0
 
-INCORRECT Dog Breed Classifications:
+INCORRECT Dog Breed Assignments:
 Real:                  dog   Classifier:    brabancon griffon
 
 ** Total Elapsed Runtime: 0:0:0

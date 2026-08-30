@@ -105,9 +105,9 @@ def print_results(results_dic, results_stats_dic, model,
             != results_stats_dic["n_images"]
         )
     ):
-        print("\nINCORRECT Dog Classifications:")
+        print("\nINCORRECT Dog/Not Dog Assignments:")
         for key in results_dic:
-            if results_dic[key][3] == 1 and results_dic[key][4] == 0:
+            if results_dic[key][3] != results_dic[key][4]:
                 print(
                     "Real: {:>20}   Classifier: {:>20}".format(
                         results_dic[key][0], results_dic[key][1]
@@ -119,7 +119,7 @@ def print_results(results_dic, results_stats_dic, model,
         and results_stats_dic["n_correct_breed"]
         != results_stats_dic["n_dogs_img"]
     ):
-        print("\nINCORRECT Dog Breed Classifications:")
+        print("\nINCORRECT Dog Breed Assignments:")
         for key in results_dic:
             if results_dic[key][3] == 1 and results_dic[key][2] == 0:
                 print(
